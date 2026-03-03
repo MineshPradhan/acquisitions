@@ -1,9 +1,11 @@
 import express from 'express';
+import logger from '#config/logger.js'  
 
 const app = express();
 
 app.get('/', (req, res) => {
-  res.status(200).send('Hello from Acquisitions!');
+    logger.info('Hello from Acquisitions!');
+    res.status(200).send('Hello from Acquisitions!');
 });
 
 export default app;
